@@ -1,0 +1,82 @@
+# classes
+1 create new class
+1 create new function
+2 create new class and initialize it with x = 5
+2 create two classes - the second class inherits the first class
+2 create two classes - the second class inherits the first class and initialize the parent class with x = 3
+2 create two classes - the second class inherits the first class and initialize the child class with x = 3
+
+# folder
+1 open the /image folder
+1 open the /text folder
+2 save text file to the /out folder
+2 save text to "test.txt" in the /out folder in append mode
+2 save text to "test.txt" in the /out folder in overwride mode
+2 delete content of a file in /text folder
+2 delete a file in the /delete folder
+2 check if the file 1.jpg exists in the /image folder
+3 open the /image folder and store the number of files into a variable
+3 open the /image folder and itereate over all files
+3 open the /image folder and itereate only over the .png files
+
+# numpy create arrays
+1 create a numpy array with the numers 1 and 2
+1 create empty numpy array
+1 create numpy array filled with ones
+1 create numpy array filled with zeros
+2 create numpy array filled with boolean true
+2 create numpy array filled with boolean false
+
+# numpy random arrays
+1 create numpy matrix filled with random ints from 0 to 5
+2 create numpy matrix filled with random boolean
+1 create numpy matrix filled with random floats in half open interval [0,1[
+1 create numpy matrix filled with random floats in interval [0,1] (uniform distribution)
+1 create numpy matrix filled with random floats from a normal distribution with mean 0 and variance 1
+
+# numpy indexing
+1 get the first element
+1 get the the last element 
+1 get every element but the first and last
+2 get the last element in the second dim
+2 get every element in reverse order 
+
+# numpy indexing with condition:
+1 get the elements bigger than 1
+2 get the elements bigger than 1 and divide them by 2
+2 check how many elements are bigger than 10
+2 check, if there are any elements which are bigger than 5
+3 given the arrays A and B, get the elements where A>1 and B<1
+
+# python data types
+1 create new list with a number a string
+1 create new dictionary with one entry
+1 create new set with 3 numbers
+1 create new set with 3 strings
+1 create new set with 1 int and one string
+1 create a new constant variable and assign a float
+
+# python data type conversions
+1 convert a list to a set
+1 convert a set to a list
+1 convert a string to a list
+2 convert a dict to a list of keys and a list of values
+3 convert a list of keys and a list of values to a dictionary
+
+# python data manipulation
+1 append a string to the end of a list
+1 append an int to the end of a list
+1 append a new entry to a dictionary
+1 append a new entry to a set
+2 insert a string to a list at position 1
+
+# visibility 
+2 create a new private variable inside a class
+2 create a new private function inside a class
+3 show the OPEN namespace of "list" data types with function arguments 
+3 show the CLOSED namespace of "string" data types with function arguments 
+3 show the CLOSED namespace of "int" data types with function arguments 
+3 show the CLOSED namespace of "float" data types with function arguments 
+3 show the OPEN namespace of "numpy" data types with function arguments 
+3 show the CLOSED namespace of "set" data types with function arguments 
+3 show the OPEN namespace of "dictionary" data types with function arguments 
