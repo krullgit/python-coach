@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 PATH_QUESTIONS = "python_questions.txt"
 PATH_ART_1 = "docs/art1.txt"
 PATH_ART_2 = "docs/art2.txt"
-DURATION = 60
+DURATION = 300
 
 def open_text_file(path):
     f = open(path, "r")
@@ -122,12 +122,13 @@ while (time.time() - time_start) < DURATION:
     questions_done.append(random_choise)
     
 
-print(f"Your time is up. You did {question_counter} questions in {DURATION} seconds.")
+print(f"Your time is up. You did {question_counter} questions in {round(time.time() - time_start,2)} seconds.")
 
 # calculate score according to difficulty the time needed
 score = 0
 for idx in questions_done:
-    score += int(question_difficulty[idx])
+    difficulty = int(question_difficulty[idx])
+    score += difficulty + (difficulty ** 2) * 0.3
 score = round(score/(time.time() - time_start),2)
 print(f"Your score is {score}")
 file_question_log.close()
@@ -141,6 +142,7 @@ scores = open_text_file("logs/scores_log.txt")
 scores = [float(x) for x in scores]
 
 # make histogram with progress
-
 plt.plot(list(range(len(scores))),scores)
 plt.show()
+plt.pause(3)
+plt.close()

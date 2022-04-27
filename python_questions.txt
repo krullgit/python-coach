@@ -1,23 +1,36 @@
-# classes
+# classes and functions
 1 create new class
 1 create new function
 2 create new class and initialize it with x = 5
 2 create two classes - the second class inherits the first class
-2 create two classes - the second class inherits the first class and initialize the parent class with x = 3
-2 create two classes - the second class inherits the first class and initialize the child class with x = 3
+3 give multiple arguments to a function with the * operator
+3 give multiple >named< arguments to a function with the ** operator
+4 create two classes - the second class inherits the first class and initialize the parent class with x = 3, finally access x from outside
+4 create two classes - the second class inherits the first class and initialize the child class with x = 3, finally access x from outside
+4 Polymorphism - overwrite a function called x from a parent class in a child class and call it from outside
 
-# folder
-1 open the /image folder
-1 open the /text folder
-2 save text file to the /out folder
-2 save text to "test.txt" in the /out folder in append mode
-2 save text to "test.txt" in the /out folder in overwride mode
-2 delete content of a file in /text folder
-2 delete a file in the /delete folder
+# path / files / folders
+1 open a file in the /image folder
+2 open a file in the /text folder in read mode
+2 save/write new text file to the /out folder
+2 save/write text to "test.txt" in the /out folder in append mode
+2 save/write text to "test.txt" in the /out folder in overwride mode
+2 delete content of a file "deletecontent.txt" in /text folder
+2 delete the file "deletefile.txt" in the /delete folder
+2 encode a string to an >os< path
+2 decode an >os< path to a string
+2 join two path
+2 get current directory
+2 create folder "test" in the /out folder
 2 check if the file 1.jpg exists in the /image folder
 3 open the /image folder and store the number of files into a variable
 3 open the /image folder and itereate over all files
 3 open the /image folder and itereate only over the .png files
+3 open a file in the /text folder and print all lines in that file
+
+# storage
+3 safe a dictionary to pickle file (into the /out folder) and read it again
+3 safe a dictionary to yaml file (into the /out folder) and read it again
 
 # numpy create arrays
 1 create a numpy array with the numers 1 and 2
@@ -28,55 +41,162 @@
 2 create numpy array filled with boolean false
 
 # numpy random arrays
-1 create numpy matrix filled with random ints from 0 to 5
+2 create numpy matrix filled with random ints from 0 to 5
+2 create numpy matrix filled with random floats in half open interval [0,1[
+2 create numpy matrix filled with random floats in interval [0,1] (uniform distribution)
+2 create numpy matrix filled with random floats from a normal distribution with mean 0 and variance 1
 2 create numpy matrix filled with random boolean
-1 create numpy matrix filled with random floats in half open interval [0,1[
-1 create numpy matrix filled with random floats in interval [0,1] (uniform distribution)
-1 create numpy matrix filled with random floats from a normal distribution with mean 0 and variance 1
 
 # numpy indexing
 1 get the first element
-1 get the the last element 
+1 get the last element
 1 get every element but the first and last
 2 get the last element in the second dim
-2 get every element in reverse order 
+2 get every element in reverse order
 
 # numpy indexing with condition:
 1 get the elements bigger than 1
-2 get the elements bigger than 1 and divide them by 2
 2 check how many elements are bigger than 10
 2 check, if there are any elements which are bigger than 5
+3 get the elements bigger than 1 and divide them by 2
 3 given the arrays A and B, get the elements where A>1 and B<1
 
 # python data types
-1 create new list with a number a string
+1 name 3 ordered data types
+1 name 2 unordered data types
+1 create new list with a number and a string
 1 create new dictionary with one entry
-1 create new set with 3 numbers
-1 create new set with 3 strings
-1 create new set with 1 int and one string
+1 create new set with 2 numbers
+1 create new set with 2 strings
+1 create new set with one int and one string
 1 create a new constant variable and assign a float
+2 check if string "a" is present in a set
+2 check if string "a" is present in a list
+2 check if string "a" is present in a dictionary (keys)
+2 check if string "a" is present in a dictionary (values)
+2 check if the list [1,2] is a numpy object
+2 iterate over a set and print its elements
+2 iterate over a list and print its elements
+2 iterate over the keys of a dictionary
+2 iterate over the values of a dictionary
+2 iterate over the key/value pairs of a dictionary
+2 iterate over a string and print its elements
+2 iterate over a tuple and print its elements
+2 create a new hash table for quick string lookups (use a set)
+2 create a new hash table for quick string lookups (use a dictionary)
 
 # python data type conversions
 1 convert a list to a set
 1 convert a set to a list
 1 convert a string to a list
 2 convert a dict to a list of keys and a list of values
+2 convert a tuple to an iterator and get the >next< element
+2 convert a char to a number and back to a char
 3 convert a list of keys and a list of values to a dictionary
+
+# python data creation
+2 get numbers from 0 to 100
+2 get a random number in [0, 1[
+3 get random ints in the interval [0,100]
 
 # python data manipulation
 1 append a string to the end of a list
 1 append an int to the end of a list
-1 append a new entry to a dictionary
-1 append a new entry to a set
-2 insert a string to a list at position 1
+1 add a new entry to a dictionary
+1 add a new entry to a set
+2 remove the entry 4 in a set 
+2 round a float to to 2 digits after comma
+2 insert "4" to a list at position 1
+2 replace the each "n" in "banana" with "b"
+2 remove duplicates in a list
+2 append the list [3,4] to another list (mutate)
+2 append the list [3,4] to another list (new object)
+2 delete the last element in a list
+2 delete the second element in a list
+2 delete the element 5 from a list
+2 sort a list of ints
+2 delete the entry with the key "test" in a dictionary
+3 randomize/shuffle a list (in place)
+
+# python string manipulation
+1 check if string ends with "end"
+1 check if string starts with "start"
+2 check if string ends with one of "a","b","c","d"
+2 convert a string to all upper case
+2 capitalize every word in a string
+2 remove newline form the string "string\n"
+3 convert the int list [1,2,3] to a string without commas
+
+# print / logging
+1 print something with the "format" annotation
+1 print something with the "f" annotation
+2 print a string, int and float with the "%" annotation
+3 use two print statements that print to the same line
+4 log any exception with its stack trace
+
+# logging
+1 import the logging module
+2 create new logging object with the name of the current file
+2 log "test" with the logging level debug/info/warning/error or critical
+3 create a filehandler and set it to append mode
+3 create a filehandler and set it to overwrite mode
+3 set the root level to "debug"
+3 create new stream handler for logging, set its level to debug and add it to the logger
+3 create file handler for logging, set its level to warning and add it to the logger
 
 # visibility 
+1 name 3 mutabel data types
+1 name 3 immutabel data types
+2 name 5 immutabel data types
+2 create a new protected variable inside a class
+2 create a new protected function inside a class
 2 create a new private variable inside a class
 2 create a new private function inside a class
-3 show the OPEN namespace of "list" data types with function arguments 
 3 show the CLOSED namespace of "string" data types with function arguments 
 3 show the CLOSED namespace of "int" data types with function arguments 
 3 show the CLOSED namespace of "float" data types with function arguments 
+3 show the OPEN namespace of "list" data types with function arguments 
 3 show the OPEN namespace of "numpy" data types with function arguments 
-3 show the CLOSED namespace of "set" data types with function arguments 
+3 show the OPEN namespace of "set" data types with function arguments 
 3 show the OPEN namespace of "dictionary" data types with function arguments 
+
+# first class citizens 
+3 pass a function to another function and call it
+3 pass a class to a function and use it 
+3 pass a function to a class and use it 
+
+# references
+1 what is the difference between a copy and a deepcopy?
+1 make a copy of a variable1
+2 make a copy "b" of the mutable object "a" and change a value in "a" with "b"
+2 make a deep copy of a variable
+
+# error handling
+2 catch the KeyError - remove element from a set
+3 catch the StopIteration - iterate over the end of an iterable objects
+
+# Assertions
+2 assert that the len of a and b is the same
+3 assert that 1 is an instance of int and print "not int" otherwise
+
+# time
+1 import time module
+1 get current time
+2 calculate the time difference in seconds between two timesteps
+2 wait for 2 seconds
+2 wait for 2 seconds with the time statement
+3 measure the average time of: >summing up the numbers from 0 to 100<
+
+# comprehensions
+2 list - square the numbers of a list
+3 dictionaries - create a dictionary where the key is a number and the value its square
+
+# ternary conditional operator
+2 print "easy" if the variable x is true, otherwise print "still easy"
+
+# lambda functions
+3 create a lambda function that sums two numbers and use it 
+
+# user input 
+2 wait for the user to type something and enter
+
