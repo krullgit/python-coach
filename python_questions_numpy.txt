@@ -70,6 +70,7 @@
 2 sum up each row of a 3x3 matrix
 2 calculutate the innerProduct/dotProduct/skalarProdukt of two arrays using np.dot
 2 calculutate the innerProduct/dotProduct/skalarProdukt of two arrays using np.inner
+2 calculutate the innerProduct/dotProduct/skalarProdukt of two arrays using np.einsum
 2 calculutate the matrix multiplication of two 2d matrices using np.matmul
 2 calculutate the matrix multiplication of two 2d matrices using np.einsum
 2 calculutate the matrix multiplication of two 2d matrices using np.inner
@@ -82,7 +83,7 @@
 2 append one matrix to another in the first dimension
 2 round a matrix to 2 digits
 3 append one matrix to another in the last dimension
-3 calculate the konecker product of two vectors usig kron
+3 calculate the konecker product of two vectors using kron
 3 calculate the konecker product of two vectors not using kron
 3 apply a zero padding of 2 to each side of a matrix 
 3 apply a zero padding of 2 to the right side of a matrix using pad 
@@ -97,7 +98,8 @@
 2 add a scalar to every entry of an array
 2 add a scalar to every entry of an array
 3 add increasing numbers (0 to inf) to the last dim of an 3x4 matrix
-3 add increasing numbers (0 to inf) to the first dim of an 3x4 matrix
+3 add increasing numbers (0 to inf) to the first dim of an 3x4 matrix using np.einsum
+3 add increasing numbers (0 to inf) to the first dim of an 3x4 matrix using * operator
 
 # numpy storage
 5 save and load two matrices in numpy format
