@@ -29,37 +29,8 @@
 3 open a file in the /text folder and print all lines in that file
 
 # storage
-3 safe a dictionary to pickle file (into the /out folder) and read it again
-3 safe a dictionary to yaml file (into the /out folder) and read it again
-
-# numpy create arrays
-1 create a numpy array with the numers 1 and 2
-1 create empty numpy array
-1 create numpy array filled with ones
-1 create numpy array filled with zeros
-2 create numpy array filled with boolean true
-2 create numpy array filled with boolean false
-
-# numpy random arrays
-2 create numpy matrix filled with random ints from 0 to 5
-2 create numpy matrix filled with random floats in half open interval [0,1[
-2 create numpy matrix filled with random floats in interval [0,1] (uniform distribution)
-2 create numpy matrix filled with random floats from a normal distribution with mean 0 and variance 1
-2 create numpy matrix filled with random boolean
-
-# numpy indexing
-1 get the first element
-1 get the last element
-1 get every element but the first and last
-2 get the last element in the second dim
-2 get every element in reverse order
-
-# numpy indexing with condition:
-1 get the elements bigger than 1
-2 check how many elements are bigger than 10
-2 check, if there are any elements which are bigger than 5
-3 get the elements bigger than 1 and divide them by 2
-3 given the arrays A and B, get the elements where A>1 and B<1
+5 safe a dictionary to pickle file (into the /out folder) and read it again
+5 safe a dictionary to yaml file (into the /out folder) and read it again
 
 # python data types
 1 name 3 ordered data types
@@ -130,7 +101,7 @@
 # print / logging
 1 print something with the "format" annotation
 1 print something with the "f" annotation
-2 print a string, int and float with the "%" annotation
+2 print a string, int and float with the "%" operator
 3 use two print statements that print to the same line
 4 log any exception with its stack trace
 
@@ -148,10 +119,11 @@
 1 name 3 mutabel data types
 1 name 3 immutabel data types
 2 name 5 immutabel data types
-2 create a new protected variable inside a class
-2 create a new protected function inside a class
-2 create a new private variable inside a class
-2 create a new private function inside a class
+2 create a static element inside a class (outside init)
+2 create a protected variable inside a class (inside init)
+2 create a protected function inside a class (inside init)
+2 create a private variable inside a class (inside init)
+2 create a private function inside a class (inside init)
 3 show the CLOSED namespace of "string" data types with function arguments 
 3 show the CLOSED namespace of "int" data types with function arguments 
 3 show the CLOSED namespace of "float" data types with function arguments 
@@ -167,13 +139,13 @@
 
 # references
 1 what is the difference between a copy and a deepcopy?
-1 make a copy of a variable1
+1 make a copy of a variable
 2 make a copy "b" of the mutable object "a" and change a value in "a" with "b"
 2 make a deep copy of a variable
 
 # error handling
-2 catch the KeyError - remove element from a set
-3 catch the StopIteration - iterate over the end of an iterable objects
+3 catch the KeyError - remove element from a set
+4 catch the StopIteration - iterate over the end of an iterable objects
 
 # Assertions
 2 assert that the len of a and b is the same
@@ -183,9 +155,9 @@
 1 import time module
 1 get current time
 2 calculate the time difference in seconds between two timesteps
-2 wait for 2 seconds
-2 wait for 2 seconds with the time statement
-3 measure the average time of: >summing up the numbers from 0 to 100<
+2 wait for 2 seconds with the time module
+3 wait for 2 seconds with by calulating the difference of timestamps
+4 measure the average time of: >summing up the numbers from 0 to 100<
 
 # comprehensions
 2 list - square the numbers of a list

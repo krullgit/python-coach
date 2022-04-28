@@ -9,7 +9,8 @@ import random
 import matplotlib.pyplot as plt
 
 # parameter
-PATH_QUESTIONS = "python_questions.txt"
+# PATH_QUESTIONS = "python_questions.txt" # for normal python questions
+PATH_QUESTIONS = "python_questions_numpy.txt" # for numpy questions 
 PATH_ART_1 = "docs/art1.txt"
 PATH_ART_2 = "docs/art2.txt"
 DURATION = 300
@@ -144,5 +145,5 @@ scores = [float(x) for x in scores]
 # make histogram with progress
 plt.plot(list(range(len(scores))),scores)
 plt.show()
-plt.pause(3)
+# plt.pause(3)
 plt.close()

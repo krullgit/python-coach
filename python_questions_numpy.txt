@@ -1,0 +1,129 @@
+# numpy general
+1 print the numpy version
+1 check data type of matrix
+1 check if variable is a numpy array
+1 check how many bytes an array takes
+
+# numpy iterate
+2 iterate over all the elements of a matrix with npiter
+
+# numpy create arrays
+1 create a numpy array with the numers 1 and 2
+1 create empty numpy array
+1 create numpy array filled with ones
+1 create numpy array filled with zeros
+2 create empty numpy array with type int
+2 create numpy array filled with boolean true
+2 create numpy array filled with boolean false
+2 create an array from 0 to 100 
+2 create an array from 0 to 100 like: [0,2,4,6 ... 98,100]
+2 create identity matrix with shape 3,3
+2 create an array with 5 evenly distributed values between 10 and 20
+2 create a matrix with 1,2,3 on the diagonal
+2 create a matric with ones below the diag and 0 elsewhere
+3 create empty array in the shape of another array and its dtype
+3 create a 6x6 matrix which looks like a chessbaord: [[0,1,0,1...],[1,0,1,0...],....]
+
+
+# numpy random arrays
+2 create numpy matrix filled with random ints from 0 to 5
+2 create numpy matrix filled with random floats in half open interval [0,1[
+2 create numpy matrix filled with random floats in interval [0,1] (uniform distribution)
+2 create numpy matrix filled with random floats from a normal distribution with mean 0 and variance 1
+2 create numpy matrix filled with random boolean
+2 set the random seed to 10
+2 create numpy matrix with pseudo random numbers
+
+# numpy indexing
+1 get the first element
+1 get the last element
+1 get every element but the first and last
+2 get the last element in the second dim
+2 get every element in reverse order
+3 get every row in reverse column order from a 3x3 matrix
+3 create: 5,5 matrix, with elements on the borders = 1, and inside 0
+3 change/swap the first and last row of a 3x3 matrix
+3 change/swap the first and last column of a 3x3 matrix
+
+# numpy conditions
+1 get the elements bigger than 1
+2 check if there are any elements zero/False
+2 check if there are all elements zero/False
+2 check how many elements are bigger than 10
+2 check if there are any elements which are bigger than 5
+3 get the elements bigger than 1 and divide them by 2
+3 create the arrays A and B and get the elements where A>1 and B<1 using the & operator and where function
+3 create the arrays A and B and get the elements where A>1 and B<1 using the * operator
+3 check which elements of matrix a is present in the array b
+
+# numpy change dimenstions
+2 reshape array to dims 3,3
+2 flatten a matrix into an array using flatten
+2 flatten a matrix into an array using reshape
+2 add a dim at axis=0 to an array
+
+# numpy general operators
+1 convert numpy array to python list
+1 transpose a matrix
+1 find max in an array
+2 find min for every row in a matrix
+2 sum up each row of a 3x3 matrix
+2 calculutate the innerProduct/dotProduct/skalarProdukt of two arrays using np.dot
+2 calculutate the innerProduct/dotProduct/skalarProdukt of two arrays using np.inner
+2 calculutate the matrix multiplication of two 2d matrices using np.matmul
+2 calculutate the matrix multiplication of two 2d matrices using np.einsum
+2 calculutate the matrix multiplication of two 2d matrices using np.inner
+2 calculate the hadamard product of two arrays using einsum
+2 calculate the hadamard product of two arrays using multiply
+2 calculate the hadamard product of two arrays using * 
+2 check if two arrays are equal
+2 sort the rows in a matrix
+2 sort the columns in a matrix
+2 append one matrix to another in the first dimension
+2 round a matrix to 2 digits
+3 append one matrix to another in the last dimension
+3 calculate the konecker product of two vectors usig kron
+3 calculate the konecker product of two vectors not using kron
+3 apply a zero padding of 2 to each side of a matrix 
+3 apply a zero padding of 2 to the right side of a matrix using pad 
+3 apply a zero padding of 2 to the right side of a matrix using append 
+3 get unique elements in an array and count them
+3 convert [[1,2,3]] to [[1,2,3],[1,2,3]] using tile
+3 convert [[1,2,3]] to [[1,2,3],[1,2,3]] using append
+3 convert [[1,1,1],[2,2,2]] to [[1,1,1,1,1,1],[2,2,2,2,2,2]] using tile
+3 convert [[1,1,1],[2,2,2]] to [[1,1,1,1,1,1],[2,2,2,2,2,2]] using append
+
+# numpy broadcasting
+2 add a scalar to every entry of an array
+2 add a scalar to every entry of an array
+3 add increasing numbers (0 to inf) to the last dim of an 3x4 matrix
+3 add increasing numbers (0 to inf) to the first dim of an 3x4 matrix
+
+# numpy storage
+5 save and load two matrices in numpy format
+5 save and load two matrices in txt (readable) format
+
+
+# numpy lina operators
+2 get the determinante of a matrix
+3 get eigenvalues and eigenvectors of a 3x3 matrix
+
+# numpy algebra
+3 apply the sin function to an array
+
+# numpy einsum
+1 sum an array
+2 sum a matrix on axis 0
+2 sum a matrix on axis 1
+2 sum a matrix on axis 1
+2 sum the diagonal of a 2x2 matrix
+2 get the diagonal of a 2x2 matrix
+2 transpose a matrix
+3 multiply two matrices on dims 0 and 1
+3 multiply two matrices on dims 1 and 0 and transpose the result
+3 get the outer product of two arrays
+4 multiply two 3x3x3 batch matrices in the dims 1 and 2
+
+
+
+
