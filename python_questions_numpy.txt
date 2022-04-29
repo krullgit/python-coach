@@ -5,7 +5,7 @@
 1 check how many bytes an array takes
 
 # numpy iterate
-2 iterate over all the elements of a matrix with npiter
+2 iterate over all the elements of a matrix with nditer
 
 # numpy create arrays
 1 create a numpy array with the numers 1 and 2
@@ -24,7 +24,6 @@
 3 create empty array in the shape of another array and its dtype
 3 create a 6x6 matrix which looks like a chessbaord: [[0,1,0,1...],[1,0,1,0...],....]
 
-
 # numpy random arrays
 2 create numpy matrix filled with random ints from 0 to 5
 2 create numpy matrix filled with random floats in half open interval [0,1[
@@ -40,7 +39,7 @@
 1 get every element but the first and last
 2 get the last element in the second dim
 2 get every element in reverse order
-3 get every row in reverse column order from a 3x3 matrix
+3 get every row in reverse order from a 3x3 matrix (entries of each row are reversed)
 3 create: 5,5 matrix, with elements on the borders = 1, and inside 0
 3 change/swap the first and last row of a 3x3 matrix
 3 change/swap the first and last column of a 3x3 matrix
@@ -55,56 +54,66 @@
 3 create the arrays A and B and get the elements where A>1 and B<1 using the & operator and where function
 3 create the arrays A and B and get the elements where A>1 and B<1 using the * operator
 3 check which elements of matrix a is present in the array b
+3 get the x and y coordinates (two separate arrays) of every entry in a matrix that is bigger than 0.5
 
-# numpy change dimenstions
+# numpy change dimensions
 2 reshape array to dims 3,3
-2 flatten a matrix into an array using flatten
-2 flatten a matrix into an array using reshape
+2 flatten a matrix into an array using np.flatten
+2 flatten a matrix into an array using np.reshape
 2 add a dim at axis=0 to an array
 
 # numpy general operators
 1 convert numpy array to python list
 1 transpose a matrix
 1 find max in an array
-2 find min for every row in a matrix
-2 sum up each row of a 3x3 matrix
+2 convert int array to float array
+2 find min for every row in a matrix (reduce columns)
+2 sum up each row of a 3x3 matrix (reduce columns)
+2 sum up each row of a 3x3 matrix using np.einsum (reduce columns)
 2 calculutate the innerProduct/dotProduct/skalarProdukt of two arrays using np.dot
 2 calculutate the innerProduct/dotProduct/skalarProdukt of two arrays using np.inner
 2 calculutate the innerProduct/dotProduct/skalarProdukt of two arrays using np.einsum
-2 calculutate the matrix multiplication of two 2d matrices using np.matmul
-2 calculutate the matrix multiplication of two 2d matrices using np.einsum
+2 calculutate the matrix multiplication of two 2d matrices using np.dot
 2 calculutate the matrix multiplication of two 2d matrices using np.inner
-2 calculate the hadamard product of two arrays using einsum
-2 calculate the hadamard product of two arrays using multiply
+2 calculutate the matrix multiplication of two 2d matrices using np.matmul
+2 calculutate the matrix multiplication of two 2d matrices using @ operator
+2 calculutate the matrix multiplication of two 2d matrices using np.einsum
+2 calculate the hadamard product of two arrays using np.multiply
 2 calculate the hadamard product of two arrays using * 
-2 check if two arrays are equal
-2 sort the rows in a matrix
+2 calculate the hadamard product of two arrays using np.einsum
+2 check if two arrays are equal with np.allclose and "None" counts as equal
+2 check if two arrays are equal with np.array_equal
+2 sort the rows in a matrix (entries of each row are sorted)
 2 sort the columns in a matrix
 2 append one matrix to another in the first dimension
 2 round a matrix to 2 digits
 3 append one matrix to another in the last dimension
-3 calculate the konecker product of two vectors using kron
-3 calculate the konecker product of two vectors not using kron
+3 calculate the konecker product of two vectors using np.kron
+3 calculate the konecker product of two vectors not using np.outer and np.flatten
 3 apply a zero padding of 2 to each side of a matrix 
-3 apply a zero padding of 2 to the right side of a matrix using pad 
-3 apply a zero padding of 2 to the right side of a matrix using append 
+3 apply a zero padding of 2 to the right side of a matrix using np.pad 
+3 apply a zero padding of 2 to the right side of a matrix using np.append 
 3 get unique elements in an array and count them
-3 convert [[1,2,3]] to [[1,2,3],[1,2,3]] using tile
-3 convert [[1,2,3]] to [[1,2,3],[1,2,3]] using append
-3 convert [[1,1,1],[2,2,2]] to [[1,1,1,1,1,1],[2,2,2,2,2,2]] using tile
-3 convert [[1,1,1],[2,2,2]] to [[1,1,1,1,1,1],[2,2,2,2,2,2]] using append
+3 convert [[1,2,3]] to [[1,2,3],[1,2,3]] using np.tile
+3 convert [[1,2,3]] to [[1,2,3],[1,2,3]] using np.append
+3 convert [[1,1,1],[2,2,2]] to [[1,1,1,1,1,1],[2,2,2,2,2,2]] using np.tile
+3 convert [[1,1,1],[2,2,2]] to [[1,1,1,1,1,1],[2,2,2,2,2,2]] using np.append
 
 # numpy broadcasting
-2 add a scalar to every entry of an array
-2 add a scalar to every entry of an array
-3 add increasing numbers (0 to inf) to the last dim of an 3x4 matrix
-3 add increasing numbers (0 to inf) to the first dim of an 3x4 matrix using np.einsum
-3 add increasing numbers (0 to inf) to the first dim of an 3x4 matrix using * operator
+2 multiply a scalar to every entry of an array using * operator
+2 multiply a scalar to every entry of an array using np.multiply
+2 multiply a scalar to every entry of an array using np.einsum
+3 multiply increasing numbers (0 to inf) to dim=-1 of an 3x4 matrix using np.multiply
+3 multiply increasing numbers (0 to inf) to dim=-1 of an 3x4 matrix using np.einsum
+3 multiply increasing numbers (0 to inf) to dim=-1 of an 3x4 matrix using * operator
+3 add a vector to dim=0 of a 3x4 matrix using + operator
+3 add a vector to dim=0 of a 3x4 matrix using np.add
+4 add the vector [0,1,2] to dim=0 of a 3x3x3 matrix
 
 # numpy storage
-5 save and load two matrices in numpy format
-5 save and load two matrices in txt (readable) format
-
+4 save and load one matrices in txt (readable) format to the folder "/out"
+4 save and load one matrix in numpy format to the folder "/out" (npy file)
+5 save and load two matrices in numpy format to the folder "/out" (npz file)
 
 # numpy lina operators
 2 get the determinante of a matrix
@@ -117,7 +126,6 @@
 1 sum an array
 2 sum a matrix on axis 0
 2 sum a matrix on axis 1
-2 sum a matrix on axis 1
 2 sum the diagonal of a 2x2 matrix
 2 get the diagonal of a 2x2 matrix
 2 transpose a matrix
@@ -125,7 +133,6 @@
 3 multiply two matrices on dims 1 and 0 and transpose the result
 3 get the outer product of two arrays
 4 multiply two 3x3x3 batch matrices in the dims 1 and 2
-
 
 
 

@@ -7,10 +7,9 @@
 import time
 import random
 import matplotlib.pyplot as plt
+import os 
 
 # parameter
-# PATH_QUESTIONS = "python_questions.txt" # for normal python questions
-PATH_QUESTIONS = "python_questions_numpy.txt" # for numpy questions 
 PATH_ART_1 = "docs/art1.txt"
 PATH_ART_2 = "docs/art2.txt"
 DURATION = 300
@@ -43,12 +42,48 @@ def print_ascii_art_from_file(path):
         time.sleep(0.08)
     print("\n\n")
 
+
+
+# welcome the user
+msg_welcome = "Welcome to the python drill camp."
+msg_instructions = "If a variable, class, or function is required for a task, you have to create them on your own, that's part of the challenge."
+print_ascii_art_from_file(PATH_ART_1)
+print_waiting_animation()
+print_as_typewriter(msg_welcome, 0.1)
+print("", end="\n\n")
+print_waiting_animation()
+# print_as_typewriter(msg_instructions, 0.05)
+# print("", end="\n\n")
+
+# ask for the topic
+tmp_topic_invalid = True 
+questions_topic = ""
+while tmp_topic_invalid:
+    try:
+        print("Choose the topic of your questions. The following question files are available:")
+        filesnames = os.listdir(os.getcwd())
+        tmp_counter = 0
+        tmp_filesnames = []
+        for filename in filesnames:
+            if not filename.startswith("python_questions_"): continue
+            tmp_filesnames.append(filename)
+            print(f"[{tmp_counter}]: {filename}")
+            tmp_counter += 1
+        topic_number = input("Choose your topic (number):")
+        topic_number = int(topic_number)
+        questions_topic = tmp_filesnames[topic_number]
+        tmp_topic_invalid = False
+    except ValueError:
+        print("Please enter valid number. You failed the python training already haha")
+    except IndexError:
+        print("Please enter valid number. You failed the python training already haha")
+
 # open the file with the questions and parse them
 question_type = []
 question_difficulty = []
 questions = []
 tmp_question_type = ""
-questions_raw = open_text_file(PATH_QUESTIONS)
+questions_raw = open_text_file(questions_topic)
 for line in questions_raw:
     if line == '\n': # filter out the new lines
         continue
@@ -61,19 +96,7 @@ for line in questions_raw:
         question_type.append(tmp_question_type) # append the same question type as before
         question_difficulty.append(int(line[0]))
         questions.append(line[2:].strip())
-        
 assert(len(questions) == len(question_type)), "question types and questions must have the same length"
-
-# welcome the user
-msg_welcome = "Welcome to the python drill camp."
-msg_instructions = "If a variable, class, or function is required for a task, you have to create them on your own, that's part of the challenge."
-print_ascii_art_from_file(PATH_ART_1)
-print_waiting_animation()
-print_as_typewriter(msg_welcome, 0.1)
-print("", end="\n\n")
-print_waiting_animation()
-# print_as_typewriter(msg_instructions, 0.05)
-# print("", end="\n\n")
 
 # ask for the difficulty
 tmp_difficulty_invalid = True
@@ -134,12 +157,16 @@ score = round(score/(time.time() - time_start),2)
 print(f"Your score is {score}")
 file_question_log.close()
 
+# get the scores log filename according to the topic
+path_log_scores = questions_topic.replace("python_questions_","")
+path_log_scores = "logs/scores_log_" + path_log_scores
+
 # just save the scores
-file_question_scores = open("logs/scores_log.txt", "a")
+file_question_scores = open(path_log_scores, "a")
 file_question_scores.write(str(score)+"\n")
 file_question_scores.close()
 
-scores = open_text_file("logs/scores_log.txt")
+scores = open_text_file(path_log_scores)
 scores = [float(x) for x in scores]
 
 # make histogram with progress
